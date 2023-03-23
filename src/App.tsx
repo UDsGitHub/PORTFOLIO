@@ -1,13 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, CSSProperties } from "react";
 import Navbar from "../src/components/navbar";
 import Home from "../src/components/home";
 import About from "./components/about";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
+import BounceLoader from "react-spinners/BounceLoader";
 
 function App() {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => setLoading(false), 3000);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,14 +29,22 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar isTopOfPage={isTopOfPage} />
-      <main className="pt-[82px] max-w-[1600px] w-full mx-auto px-[50px] md:px-[100px] lg:px-[150px]">
-        <Home />
-        <About />
-        <Projects />
-        <Contact />
-        <Footer />
-      </main>
+      {loading ? (
+        <div className="bg-[#1e1e1e] absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center animate-[fadeOut_1500ms_ease-out_1500ms]">
+          <BounceLoader color="#BBB4AB" size={150} loading={loading} />
+        </div>
+      ) : (
+        <>
+          <Navbar isTopOfPage={isTopOfPage} />
+          <main className="pt-[82px] max-w-[1600px] w-full mx-auto px-[50px] md:px-[100px] lg:px-[150px]">
+            <Home />
+            <About />
+            <Projects />
+            <Contact />
+            <Footer />
+          </main>
+        </>
+      )}
     </div>
   );
 }

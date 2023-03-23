@@ -204,3 +204,8 @@ ol a:nth-child(n + 100):before {
 .proj-img:hover a::before {
   opacity: 0;
 }
+
+ @keyframes fadeOut {
+    from {opacity: 1}
+    to {opacity: 0}
+  }

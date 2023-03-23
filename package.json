@@ -9,11 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "postcss": "^8.4.21",
     "react": "^18.2.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.2.0",
-    "tailwindcss": "^3.2.4",
-    "postcss": "^8.4.21"
+    "react-spinners": "^0.13.8",
+    "tailwindcss": "^3.2.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
