@@ -22,7 +22,7 @@ const Project = ({ proj }: Props) => {
         </a>
         {/* DESC */}
         <div className="bg-neutral-800 p-6 mb-6 rounded-md">
-          <p className="text-lg">{proj.desc}</p>
+          <p className="text-sm md:text-lg">{proj.desc}</p>
         </div>
         {/* TECH STACK */}
         <ul className="flex gap-5 mb-5">

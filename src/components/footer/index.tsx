@@ -5,9 +5,7 @@ type Props = {};
 const Footer = (props: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 768px)");
 
-  let linkStyles = isAboveMediumScreens
-    ? "hover:ml-4"
-    : "hover:-translate-y-4";
+  let linkStyles = isAboveMediumScreens ? "hover:ml-4" : "hover:-translate-y-4";
   return (
     <footer className="text-center text-xs py-10">
       <ul
@@ -17,7 +15,11 @@ const Footer = (props: Props) => {
         }`}
       >
         <li className={"duration-300 " + linkStyles}>
-          <a href="https://github.com/UDsGitHub" target={"_blank"} className="inline-block w-full px-4">
+          <a
+            href="https://github.com/UDsGitHub"
+            target={"_blank"}
+            className="inline-block w-full px-4"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               role="img"
@@ -35,16 +37,20 @@ const Footer = (props: Props) => {
           </a>
         </li>
         <li className={"duration-300 " + linkStyles}>
-          <a href="https://www.instagram.com/d.ud.e_gram/" target={"_blank"} className="inline-block w-full px-4">
+          <a
+            href="https://www.instagram.com/d.ud.e_gram/"
+            target={"_blank"}
+            className="inline-block w-full px-4"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               role="img"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="w-6 h-6"
             >
               <title>Instagram</title>
@@ -57,7 +63,8 @@ const Footer = (props: Props) => {
         <li className={"duration-300 " + linkStyles}>
           <a
             href="https://www.linkedin.com/in/udochukwu-amaefule/"
-            target={"_blank"} className="inline-block w-full px-4"
+            target={"_blank"}
+            className="inline-block w-full px-4"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +87,8 @@ const Footer = (props: Props) => {
         <li className={"duration-300 " + linkStyles}>
           <a
             href="https://www.frontendmentor.io/profile/UDsGitHub"
-            target={"_blank"} className="inline-block w-full px-4"
+            target={"_blank"}
+            className="inline-block w-full px-4"
           >
             <svg
               className="w-6 h-6"
