@@ -41,7 +41,7 @@ const About = (props: Props) => {
               development with ASP.NET
             </p>
             <p className="text-[#7f7467] mb-4">
-              I was fortunate enough to havr the opportunity to work 2
+              I was fortunate enough to have the opportunity to work 2
               internships in the past year, learning more about React,
               Typescript, and ASP.NET whilst helping the companies achieve their
               goals.
