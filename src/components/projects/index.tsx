@@ -28,7 +28,7 @@ const Projects = (props: Props) => {
     {
       img: Proj3,
       title: "Vite Gym Website",
-      desc: "A Gym Web Application created React, Tailwind css, and Framer motion. Swipe through and enjoy the smooth animations on the site and test out its responsive nature.",
+      desc: "A Gym Web Application created with React, Tailwind css, and Framer motion. Swipe through and enjoy the smooth animations on the site and test out its responsive nature.",
       tech: ["HTML", "CSS", "React", "Tailwind CSS", "Framer Motion"],
       git: "https://github.com/UDsGitHub/Vite-Gym-Website",
       external: "https://bespoke-raindrop-baa46e.netlify.app/",
