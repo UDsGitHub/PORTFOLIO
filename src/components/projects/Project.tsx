@@ -1,21 +1,25 @@
 import { ProjectType } from "../../shared/types";
+import useMediaQuery from "../../shared/useMediaQuery";
 
 type Props = {
   proj: ProjectType;
 };
 
 const Project = ({ proj }: Props) => {
+  const isAboveSmallScreens = useMediaQuery("(min-width: 640px)")
   return (
     // IMAGE AND TEXT
     <div className="project flex mb-[100px]">
       {/* IMAGE */}
-      <div className="proj-img basis-1/2 overflow-hidden rounded-md">
-        <a className="relative" href={proj.external} target="_blank">
-          <img className="w-full" src={proj.img} alt="project snippet" />
-        </a>
-      </div>
+      { isAboveSmallScreens &&
+        <div className="proj-img basis-1/2 overflow-hidden rounded-md">
+          <a className="relative" href={proj.external} target="_blank">
+            <img className="w-full" src={proj.img} alt="project snippet" />
+          </a>
+        </div>
+      }
       {/* TEXT */}
-      <div className="proj-content basis-1/2 text-primary-100 z-10 -mr-[30px]">
+      <div className={`proj-content ${isAboveSmallScreens && "basis-1/2"} text-primary-100 z-10 -mr-[30px]`}>
         {/* TITLE */}
         <a className="proj-title inline-block mb-5" href={proj.external}>
           {proj.title}
