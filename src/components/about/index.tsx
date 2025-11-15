@@ -1,17 +1,24 @@
 import Profile from "../../assets/profile.jpg";
-import SkillCard from "./SkillCard";
+import SkillChip from "./SkillChip";
 
 type Props = {};
 
 const About = (props: Props) => {
   const skills = [
+    "React",
+    "React Native",
+    "Node.js",
+    "SQL",
+    "Python",
+    "Postgres",
+    "Docker",
+    "AWS",
+    "NextJS",
+    "Express",
     "HTML",
     "CSS",
     "Javascript",
-    "React",
     "Typescript",
-    "Node.js",
-    "Express",
     "MongoDB",
     "ASP.NET",
   ];
@@ -55,7 +62,7 @@ const About = (props: Props) => {
 
           <div className="flex flex-wrap gap-4">
             {skills.map((skill) => (
-              <SkillCard skill={skill} key={skill} />
+              <SkillChip skill={skill} key={skill} />
             ))}
           </div>
         </div>
